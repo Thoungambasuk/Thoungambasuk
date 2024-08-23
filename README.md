@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Thoungambasuk
-- 👀 I’m interested in gaming, Space and weapons
+- 👀 I’m interested in gaming, Space 
 - 🌱 I’m currently learning BCA
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
