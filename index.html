@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: linear-gradient(to right, #121212, #1e1e1e);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: linear-gradient(90deg, #1db954, #1ed760);
+      border-bottom: 2px solid #000;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-list {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #000;
+    }
+
+    /* Main Content */
+    .main {
+      padding: 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      margin: 2rem 0 1rem;
+      color: #1db954;
+      font-size: 1.75rem;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* Cards */
+    .card {
+      background: linear-gradient(145deg, #2a2a2a, #1c1c1c);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background: linear-gradient(145deg, #1db954, #1ed760);
+      color: #000;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Audio Player */
+    .audio-container {
+      width: 100%;
+      margin: 0.5rem auto;
+    }
+
+    .audio-player {
+      width: 100%;
+      height: 30px;
+      border-radius: 15px;
+      background: #333;
+      outline: none;
+    }
+
+    audio::-webkit-media-controls-panel {
+      background: #333;
+      border-radius: 15px;
+    }
+
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-mute-button {
+      filter: invert(1);
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(90deg, #d3dfd7, #1ed760);
+      padding: 1.5rem;
+      text-align: center;
+      font-weight: 600;
+      margin-top: 3rem;
+      color: #000;
+    }
+
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .nav-list {
+        gap: 1rem;
+      }
+      
+      .nav-link {
+        font-size: 1rem;
+      }
+      
+      .grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      
+      .card-image {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li><a href="#" class="nav-link">Trending</a></li>
+      <li><a href="#" class="nav-link">Artists</a></li>
+      <li><a href="#" class="nav-link">Albums</a></li>
+      <li><a href="#" class="nav-link">Radio</a></li>
+      <li><a href="#" class="nav-link">Charts</a></li>
+    </ul>
+  </nav>
+
+  <main class="main">
+    <section>
+      <h2 class="section-title">Trending Songs</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/AgarTum.jpg" alt="Agar Tum Saath Ho" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/agartum.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">Agar Tum Saath Ho</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/2Khatole.jpeg" alt="2 Khatole" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">2 Khatole</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/finding her.jpeg" alt="Finding Her" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">Finding Her</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/maand.jpeg" alt="Maand" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">Maand</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/jhol.jpeg" alt="Jhol" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">Jhol</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/pal pal.jpeg" alt="Pal Pal" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">Pal Pal</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/aa seetadevi navvula.jpeg" alt="Aa Seetadevi Navvula" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">Aa Seetadevi Navvula</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/48rhymes.jpeg" alt="48 Rhymes" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">48 Rhymes</p>
+        </div>
+        
+        <div class="card">
+          <img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/chal.jpeg" alt="CHAL" class="card-image">
+          <div class="audio-container">
+            <audio controls class="audio-player">
+              <source src="https://example.com/sample.mp3" type="audio/mpeg">
+            </audio>
+          </div>
+          <p class="card-title">CHAL</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Popular Artists</h2>
+      <div class="grid">
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/pritam.jpeg" alt="Pritam" class="card-image"><p class="card-title">Pritam</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/arijitsingh.jpeg" alt="Arijit Singh" class="card-image"><p class="card-title">Arijit Singh</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/ar_rahman.jpeg" alt="A.R Rahman" class="card-image"><p class="card-title">A.R Rahman</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/sachin_jigar.jpeg" alt="Sachin-Jigar" class="card-image"><p class="card-title">Sachin-Jigar</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/vishal_shekhar.jpeg" alt="Vishal Shekhar" class="card-image"><p class="card-title">Vishal Shekhar</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/atif_aslam.jpeg" alt="Atif Aslam" class="card-image"><p class="card-title">Atif Aslam</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/amirukh_ravichander.jpeg" alt="Anirudh Ravichander" class="card-image"><p class="card-title">Anirudh Ravichander</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/yoyohoneysingh.jpeg" alt="Yo Yo Honey Singh" class="card-image"><p class="card-title">Yo Yo Honey Singh</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/uditnarayan.jpeg" alt="Udit Narayan" class="card-image"><p class="card-title">Udit Narayan</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Popular Albums</h2>
+      <div class="grid">
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/yeh jawaani hai deewani.jpeg" alt="Yeh Jawaani Hai Deewani" class="card-image"><p class="card-title">Yeh Jawaani Hai Deewani</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/sanam teri kasam.jpeg" alt="Sanam Teri Kasam" class="card-image"><p class="card-title">Sanam Teri Kasam</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/young goat.jpeg" alt="Young Goat" class="card-image"><p class="card-title">Young Goat</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/aashiqui 2.jpeg" alt="Aashiqui 2" class="card-image"><p class="card-title">Aashiqui 2</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/glory.jpeg" alt="Glory" class="card-image"><p class="card-title">Glory</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/raanjhan.jpeg" alt="Raanjhan" class="card-image"><p class="card-title">Raanjhan</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/sanam teri kasam.jpeg" alt="Sanam Teri Kasam" class="card-image"><p class="card-title">Sanam Teri Kasam</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/arijitsingh.jpeg" alt="Ultimate Love Songs" class="card-image"><p class="card-title">Ultimate Love Songs</p></div>
+        <div class="card"><img src="https://raw.githubusercontent.com/ThomasOinam/Project11/main/folder/making memories.jpeg" alt="Making Memories" class="card-image"><p class="card-title">Making Memories</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Popular Radio</h2>
+      <div class="grid">
+        <div class="card"><p class="card-title">Arijit Singh Radio</p></div>
+        <div class="card"><p class="card-title">Shreya Ghoshal</p></div>
+        <div class="card"><p class="card-title">Diljit Dosanjh</p></div>
+        <div class="card"><p class="card-title">S.P Balasubrahmamyam</p></div>
+        <div class="card"><p class="card-title">KK</p></div>
+        <div class="card"><p class="card-title">Sidhu Moose Wala</p></div>
+        <div class="card"><p class="card-title">Kumar Sanu</p></div>
+        <div class="card"><p class="card-title">Yo Yo Honey Singh</p></div>
+        <div class="card"><p class="card-title">Kishore Kumar</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Featured Charts</h2>
+      <div class="grid">
+        <div class="card"><p class="card-title">Top Songs Global</p></div>
+        <div class="card"><p class="card-title">Top Songs India</p></div>
+        <div class="card"><p class="card-title">Top 50 Global</p></div>
+        <div class="card"><p class="card-title">Viral 50 India</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Spotify Clone</p>
+    <p>Created by Thoungamba Sukham</p>
+    <p>BCA Student</p>
+    <p>Roll no: BC2053</p>
+    <p>NEILIT Imphal</p>
+  </footer>
+</body>
+</html>
